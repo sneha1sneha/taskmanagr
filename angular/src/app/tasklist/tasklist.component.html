@@ -1,0 +1,39 @@
+<!-- 
+
+<nav class="navbar navbar-expand-lg navbar-info bg-info">
+  <div class="container-fluid">
+    <div class="col-md-4 text-center company__info">
+      <span class="company__logo">
+        <h2><span class="fa fa-android"></span></h2>
+      </span>
+      <h4 class="company_title">TSG - Task Manager</h4>
+    </div>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav">
+        <a  class="nav-item nav-link active">Home</a>
+        <a  class="nav-item nav-link">Profile</a>
+        <li><a routerLink="/tasklist" class="nav-item nav-link active">List</a></li>
+        <a  class="nav-item nav-link disabled" tabindex="-1">Reports</a>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <li><a (click)="logout()" class="nav-item nav-link active">Log Out</a></li>
+      </div>
+    </div>
+  </div>
+</nav> -->
+
+
+
+<div id="grid-box">
+  <div>
+    <div>
+      <ag-grid-angular style="height: 400px;" class="ag-theme-alpine" [rowData]="rowData" [columnDefs]="columnDefs"
+        [rowSelection]="'multiple'" [animateRows]="true" [frameworkComponents]="frameworkComponents">
+      </ag-grid-angular>
+    </div>
+  </div>
+
+</div>

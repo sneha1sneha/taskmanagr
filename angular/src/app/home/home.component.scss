@@ -1,0 +1,47 @@
+// .logo {
+//   width: 100px;
+// }
+
+// q {
+//   font-style: italic;
+//   font-size: 1.2rem;
+//   quotes: "« " " »";
+// }
+
+
+
+
+
+
+
+
+ul.nav {
+  padding-left: 0px;
+  background-color: #3D99CE;
+  text-align: center;
+}
+
+ul.nav>li {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+ul.nav>li:hover {
+  background-color: #2779BF;
+}
+
+ul.nav>li>a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu {
+  font-size: 13px;
+  background-color: #2779BF;
+  width: 100%;
+  overflow: hidden;
+}
+
+.widget-content-wrapper {
+  padding: 10px;
+}

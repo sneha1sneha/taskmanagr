@@ -1,0 +1,55 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <app-header></app-header>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <!-- sidebar -->
+            <div class="msb" id="msb">
+                <nav class="navbar navbar-default" role="navigation">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <div class="brand-wrapper">
+                            <!-- Brand -->
+                            <div class="brand-name-wrapper">
+                                <a class="navbar-brand" href="#">
+                                    TSG TASK MANAGER
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Main Menu -->
+                    <div class="side-menu-container" *ngIf="userRole === 1">
+                        <ul class="nav navbar-nav">
+
+
+                            <li class="active"><a routerLink="/tasklistuser"><i class="fa fa-tasks"></i> Tasklist</a>
+                            </li>
+
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                    <div class="side-menu-container" *ngIf="userRole === 2">
+                        <ul class="nav navbar-nav">
+
+                            <li><a routerLink="/home"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                            <li class="active"><a routerLink="/tasklistadmin"><i class="fa fa-tasks"></i> Tasklist</a>
+                            </li>
+                            <li><a routerLink="/addtask"><i class="fa fa-cogs" aria-hidden="true"></i> Add Task</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </nav>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12"></div>
+    </div>
+</div>

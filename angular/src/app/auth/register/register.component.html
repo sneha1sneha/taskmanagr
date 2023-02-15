@@ -1,0 +1,105 @@
+
+<section class="bg-image"
+  style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center lign-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+              <form (ngSubmit)="register()" [formGroup]="registerForm" novalidate>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example1cg">First Name</label>
+                  <input type="text" id="form3Example1cg" class="form-control form-control-lg"
+                    formControlName="first_name" autocomplete="first_name" [placeholder]="' FirstName' | translate" />
+                  <span hidden translate>FirstName</span>
+                  <small [hidden]="registerForm.controls['first_name'].valid || registerForm.controls['first_name'].untouched"
+                                class="text-danger" translate>
+                                firstname is required
+                                    </small>
+               
+                 
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example3cg">last name</label>
+                  <input type="email" id="form3Example3cg" class="form-control form-control-lg"
+                    formControlName="last_name" autocomplete="last_name" [placeholder]="'Last Name' | translate" />
+                  <span hidden translate>Username</span>
+                  <small [hidden]="registerForm.controls['last_name'].valid || registerForm.controls['last_name'].untouched"
+                  class="text-danger" translate>
+                  lastname is required
+                      </small>
+
+                  
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example3cg">Email</label>
+                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" formControlName="email"
+                    autocomplete="email" [placeholder]="'Email' | translate" />
+                  <span hidden translate>email</span>
+                  <small [hidden]="registerForm.controls['email'].valid || registerForm.controls['email'].untouched" 
+                  class="text-danger" translate>
+                  enter valid email 
+                      </small>
+                      
+                     
+                  
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example4cg">username</label>
+                  <input type="Username" id="form3Example4cg" class="form-control form-control-lg"
+                    formControlName="username" autocomplete="username" [placeholder]="'Username' | translate" />
+                  <span hidden translate>Username</span>
+                  <small [hidden]="registerForm.controls['username'].valid || registerForm.controls['username'].untouched"
+                  class="text-danger" translate>
+                  usernameis required with  min length and max length 4 to 7
+                 
+                      </small>
+
+
+                  
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example4cg">password</label>
+                  <input type="password" id="form3Example4cg" class="form-control form-control-lg"
+                    formControlName="password" autocomplete="password" [placeholder]="'Password' | translate" />
+                  <span hidden translate>password</span>
+                  <small [hidden]="registerForm.controls['password'].valid ||registerForm.controls['password'].untouched"
+                  class="text-danger" translate>
+                
+                  Password is required with 
+                  1)At least 8 characters long
+                  2)Contains at least one lowercase letter
+                  3)Contains at least one uppercase letter
+                  4)Contains at least one digit
+                  5)Contains at least one special character (i.e., "@", "$", "!", "%", "*", "?", "&")
+                      </small>
+                       
+                      
+                </div>
+               
+
+                <div class="d-flex justify-content-center">
+                  <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
+                    [disabled]="registerForm.invalid || isLoading">Register</button>
+                </div>
+
+                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
+                    class="fw-bold text-body"><u>Login here</u></a></p>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

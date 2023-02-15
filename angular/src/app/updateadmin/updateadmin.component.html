@@ -1,0 +1,57 @@
+
+<div class="container">
+    <h1 class="text-center">Update Page</h1>
+    <form [formGroup]="updateForm"    (ngSubmit)="updateTask(id)"  >
+      <div class="form-group">
+        <label for="taskName">Task Name:</label>
+        <input type="text" class="form-control" id="task_name"  formControlName="task_name" >
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea class="form-control" id="description" rows="3" formControlName="description"  ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="projectName">Project Name:</label>
+        <input type="text" class="form-control" id="projectName" placeholder="Enter project name" formControlName="project_name" readonly>
+      </div>
+    
+   
+    <div class="form-group">
+    <label for="inputState">Status</label>
+
+    <select input type="text" class="form-control" class="form-select"  formControlName="status_type" >
+        <small [hidden]="updateForm.controls['status_type'].valid || updateForm.controls['status_type'].untouched"
+                  class="text-danger" translate>
+                  Status  is required
+                </small>
+         
+                                        <option >completed</option>
+                                        <option >pending</option>
+                                        <option >inprogress</option> 
+                                   
+                                  
+   
+     </select>
+     
+      </div>
+      <div class="form-outline mb-4">
+        <label for="inputState">Employee</label>
+        <select class="form-select" aria-label="Default select example"
+            formControlName="username">
+            <option *ngFor="let employee of employeeLists"  
+           >
+        {{employee.username}}  
+    </option>  
+        </select>
+        <label class="form-label" for="form3Example3cg"></label>
+    </div>
+
+
+
+      <div class="d-flex justify-content-center">
+        <button type="submit"
+            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Update
+            Task</button>
+    </div>
+    </form>
+  </div>

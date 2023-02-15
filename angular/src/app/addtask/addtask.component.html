@@ -1,0 +1,151 @@
+
+
+<section class="bg-image">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center lign-items-center h-100">
+                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                    <div class="card" style="border-radius: 15px;">
+                        <div class="card-body p-5">
+                            <h2 class="text-uppercase text-center mb-5">Add Task</h2>
+                           
+                            <form (ngSubmit)="addTask()" [formGroup]="addtaskForm" novalidate>
+
+
+                                <div class="form-outline mb-4">
+                                    <label for="inputState">Project</label>
+                                    <select class="form-select" aria-label="Default select example"
+                                        formControlName="project_name" >
+
+
+                                        <option *ngFor="let project of projectLists"  
+                                        >  
+                                    {{project.project_name}}  
+                                </option>  
+         
+                   
+                                    </select>
+                                    <small
+                                        [hidden]="addtaskForm.controls['project_name'].valid || addtaskForm.controls['project_name'].untouched"
+                                        class="text-danger" translate>
+                                        Projectname is required
+                                    </small>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example1cg">Task Name</label>
+                                    <input type="text" id="form3Example1cg" class="form-control form-control-lg"
+                                        formControlName="task_name" autocomplete="task_name"
+                                        [placeholder]="' taskname' | translate" />
+                                    <span hidden translate>Taskname</span>
+                                    <small
+                                        [hidden]="addtaskForm.controls['task_name'].valid || addtaskForm.controls['task_name'].untouched"
+                                        class="text-danger" translate>
+                                        task name is required
+                                    </small>
+
+                                </div>
+
+
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">description</label>
+                                    <input type="textarea" id="form3Example3cg" class="form-control form-control-lg"
+                                        formControlName="description" autocomplete="description"
+                                        [placeholder]="'description' | translate" />
+                                    <span hidden translate>description</span>
+
+                                    <small
+                                    [hidden]="addtaskForm.controls['description'].valid || addtaskForm.controls['description'].untouched"
+                                    class="text-danger" translate>
+                                    description name is required
+                                </small>
+
+                                </div>
+
+
+                                <div class="form-outline mb-4">
+                                    <label for="inputState">Employee</label>
+                                    <select class="form-select" aria-label="Default select example"
+                                        formControlName="username">
+                                        <option *ngFor="let employee of employeeLists"  
+                                       >
+                                    {{employee.username}}  
+                                </option>  
+                                    </select>
+                                    <small
+                                    [hidden]="addtaskForm.controls['username'].valid || addtaskForm.controls['username'].untouched"
+                                    class="text-danger" translate>
+                                    employee name is required
+                                </small>
+                                    <label class="form-label" for="form3Example3cg"></label>
+                                </div>
+
+
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">StartDate </label>
+                                    <input type="date" id="form3Example3cg" class="form-control form-control-lg"
+                                        formControlName="planned_start_date" autocomplete="planned_start_date"
+                                        [placeholder]="'planned_start_date' | translate" />
+                                    <span hidden translate> StartDate </span>
+                                    <small
+                                    [hidden]="addtaskForm.controls['planned_start_date'].valid || addtaskForm.controls['planned_start_date'].untouched"
+                                    class="text-danger" translate>
+                                   StartDate is required
+                                </small>
+
+                                   
+
+
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example4cg">EndDate</label>
+                                    <input type="date" id="form3Example4cg" class="form-control form-control-lg"
+                                        formControlName="planned_end_date" autocomplete="planned_end_date"
+                                        [placeholder]="'planned_end_date' | translate" />
+                                    <span hidden translate>EndDate</span>
+
+                                    <small
+                                    [hidden]="addtaskForm.controls['planned_end_date'].valid || addtaskForm.controls['planned_end_date'].untouched"
+                                    class="text-danger" translate>
+                                   EndDate is required
+                                </small>
+
+
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example4cg">Planned Budget</label>
+                                    <input type="tel" id="form3Example4cg" class="form-control form-control-lg"
+                                        formControlName="planned_budget" autocomplete="planned_budget"
+                                        [placeholder]="'Planned Budget' | translate" />
+                                    <span hidden translate>Planned Budget</span>
+                                    <small
+                                    [hidden]="addtaskForm.controls['planned_budget'].valid || addtaskForm.controls['planned_budget'].untouched"
+                                    class="text-danger" translate>
+                                   Planned Budget is required
+                                </small>
+
+
+                                </div>
+
+                               
+
+
+
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit"
+                                        class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Add
+                                        Task</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

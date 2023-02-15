@@ -1,0 +1,104 @@
+.msb {
+  width: 200px;
+  background-color: #F5F7F9;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: auto;
+  min-height: 100%;
+  overflow-y: auto;
+  white-space: nowrap;
+  height: 100%;
+  z-index: 1;
+  border-right: 1px solid #ddd;
+}
+
+.msb .navbar {
+  border: none;
+  margin-left: 0;
+  background-color: inherit;
+}
+
+.msb .navbar-header {
+  width: 100%;
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 20px;
+  background: #fff;
+}
+
+.msb .navbar-nav .panel {
+  border: 0 none;
+  box-shadow: none;
+  margin: 0;
+  background: inherit;
+}
+
+.msb .navbar-nav li {
+  display: block;
+  width: 100%;
+}
+
+.msb .navbar-nav li a {
+  padding: 9px;
+  color: #5f5f5f;
+}
+
+.msb .navbar-nav li a .glyphicon,
+.msb .navbar-nav li a .fa {
+  margin-right: 8px;
+}
+
+.msb .nb {
+  padding-top: 5px;
+  padding-left: 10px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+ul.nv,
+ul.ns {
+  position: relative;
+  padding: 0;
+  list-style: none;
+}
+
+.nv {
+  /*ns: nav-sub*/
+}
+
+.nv li {
+  display: block;
+  position: relative;
+}
+
+.nv li::before {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.nv li a {
+  color: #444;
+  padding: 10px 25px;
+  display: block;
+  vertical-align: middle;
+}
+
+.nv li a .ic {
+  font-size: 16px;
+  margin-right: 5px;
+  font-weight: 300;
+  display: inline-block;
+}
+
+.nv .ns li a {
+  padding: 10px 50px;
+}
+
+.brand-name-wrapper {
+  padding: 9px;
+}
+
+.navbar-brand {
+  font-size: 17px;
+}

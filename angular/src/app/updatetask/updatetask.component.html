@@ -1,0 +1,69 @@
+
+<!-- 
+<nav class="navbar navbar-expand-lg navbar-info bg-info">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand">Brand</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="#" class="nav-item nav-link active">Home</a>
+                <a href="#" class="nav-item nav-link">Profile</a>
+                <li><a routerLink="/tasklist" class="nav-item nav-link active" >List</a></li> 
+                <a href="#" class="nav-item nav-link disabled" tabindex="-1">Reports</a>
+            </div>
+            <div class="navbar-nav ms-auto">
+                <li><a (click)="logout()" class="nav-item nav-link active" >Log Out</a></li>
+            </div>
+        </div>
+    </div>
+  </nav>
+   -->
+
+
+
+
+<div class="container">
+    <h1 class="text-center">Update Page</h1>
+    <form [formGroup]="updateForm"   (ngSubmit)="updateTask(id)" >
+      <div class="form-group">
+        <label for="taskName">Task Name:</label>
+        <input type="text" class="form-control" id="task_name"  formControlName="task_name" readonly>
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea class="form-control" id="description" rows="3" formControlName="description" readonly ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="projectName">Project Name:</label>
+        <input type="text" class="form-control" id="projectName" placeholder="Enter project name" formControlName="project_name" readonly>
+      </div>
+ 
+    <div class="form-group">
+    <label for="inputState">Status</label>
+
+    <select input type="text" class="form-control" class="form-select"  formControlName="status_type" >
+        <small [hidden]="updateForm.controls['status_type'].valid || updateForm.controls['status_type'].untouched"
+                  class="text-danger" translate>
+                  Status is required
+                </small>
+         
+                                        <option value="completed">completed</option>
+                                        <option value="pending">pending</option>
+                                        <option value="inprogress">inprogress</option> 
+                                   
+                                  
+   
+     </select>
+     
+      </div>
+
+
+      <div class="d-flex justify-content-center">
+        <button type="submit"
+            class="btn btn-info btn-block btn-lg gradient-custom-4 text-body">Update
+            Task</button>
+    </div>
+    </form>
+  </div>
